@@ -111,6 +111,12 @@ class BufferPoolManager {
     }
   }
 
+  bool is_all_pinned();
+
+  void init_new_page(frame_id_t frame_id, page_id_t page_id);
+
+  frame_id_t find_replace();
+
   /**
    * Fetch the requested page from the buffer pool.
    * @param page_id id of page to be fetched
